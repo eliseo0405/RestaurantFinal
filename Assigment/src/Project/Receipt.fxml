@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Project.ReceiptPageController">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="281.0" layoutY="44.0" prefHeight="428.0" prefWidth="438.0">
+        <columns>
+          <TableColumn fx:id="orderItemColumn" prefWidth="225.0" text="ARTICULO ORDENADO" />
+          <TableColumn fx:id="quantityColumn" prefWidth="75.0" text="CANTIDAD" />
+            <TableColumn fx:id="priceColumn" prefWidth="137.0" text="PRECIO" />
+        </columns>
+      </TableView>
+      <Label fx:id="receiptLabel" layoutX="461.0" layoutY="14.0" text="RECIBO">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="Total" layoutX="599.0" layoutY="485.0" prefHeight="25.0" prefWidth="120.0" />
+      <Label fx:id="totalLabel" layoutX="513.0" layoutY="489.0" text="TOTAL + IGV" />
+      <Button fx:id="proceedBtn" layoutX="599.0" layoutY="521.0" mnemonicParsing="false" onAction="#payment" prefHeight="25.0" prefWidth="120.0" text="PROCEDER&gt;" />
+      <Button fx:id="exitBtn" layoutX="281.0" layoutY="521.0" mnemonicParsing="false" onAction="#closeAction" prefHeight="25.0" prefWidth="120.0" text="SALIDA" />
+      <Button fx:id="backBtn" layoutX="464.0" layoutY="521.0" mnemonicParsing="false" onAction="#backBtn" prefHeight="25.0" prefWidth="120.0" text="&lt;ATRÁS" />
+      <Button fx:id="DeleteBtn" layoutX="281.0" layoutY="485.0" mnemonicParsing="false" onAction="#deleteButtonPushed" prefHeight="25.0" prefWidth="120.0" text="BORRAR" />
+      <Label fx:id="receiptLabel1" layoutX="14.0" layoutY="14.0" text="TUSOLUTIONWEB TUTOS" textFill="#d70909">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
